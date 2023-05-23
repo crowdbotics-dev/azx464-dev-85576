@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Znvfh
-from .serializers import ZnvfhSerializer
+from home.models import Model1,Znvfh
+from .serializers import Model1Serializer,ZnvfhSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class ZnvfhViewSet(viewsets.ModelViewSet):
     serializer_class = ZnvfhSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Znvfh.objects.all()
+
+class Model1ViewSet(viewsets.ModelViewSet):
+    serializer_class = Model1Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Model1.objects.all()

@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Znvfh
+from home.models import Model1,Znvfh
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class ZnvfhSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Znvfh
+        fields = "__all__"
+
+class Model1Serializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Model1
         fields = "__all__"
